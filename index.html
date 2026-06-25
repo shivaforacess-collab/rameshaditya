@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Career Catalysts Global & Aditya Overseas Education</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --navy: #1a2560;
+    --navy-deep: #0d1540;
+    --gold: #c9a227;
+    --gold-light: #f0c842;
+    --white: #ffffff;
+    --off-white: #f8f9fc;
+    --grey: #6b7280;
+    --light-grey: #e8eaf0;
+    --tccg-yellow: #f5d800;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a2e;
+    background: var(--white);
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--navy-deep);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-brand-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    line-height: 1.1;
+  }
+
+  .nav-brand-text span { color: var(--tccg-yellow); }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+    text-transform: uppercase;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy-deep) !important;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    padding: 0.4rem 1rem !important;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, #1e3a8a 60%, #1a2560 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,162,39,0.2);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-logo-box {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-logo-box img {
+    max-height: 70px;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  .hero-divider {
+    width: 2px;
+    height: 60px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    max-width: 800px;
+  }
+
+  .hero-title .highlight { color: var(--tccg-yellow); }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-pill {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #e2e8f0;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy-deep);
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201,162,39,0.35);
+  }
+
+  .btn-outline {
+    border: 2px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    background: rgba(201,162,39,0.1);
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .scroll-arrow {
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid rgba(255,255,255,0.3);
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%,100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(5px); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--navy-deep);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-title .line {
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background: var(--gold);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .section-desc {
+    color: var(--grey);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    max-width: 620px;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--off-white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-feature-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .about-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: #374151;
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 0.65rem;
+    color: var(--navy-deep);
+    font-weight: 900;
+  }
+
+  .stat-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--light-grey);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .stat-num span { color: var(--gold); }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--grey);
+    margin-top: 0.3rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .mentor-card {
+    background: var(--navy-deep);
+    border-radius: 16px;
+    padding: 2rem;
+    color: var(--white);
+    border: 1px solid rgba(201,162,39,0.3);
+  }
+
+  .mentor-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0.5rem 0 0.25rem;
+  }
+
+  .mentor-title {
+    font-size: 0.8rem;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .mentor-bio {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  /* ── SERVICES / TCCG ── */
+  #tccg { background: var(--white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .service-card {
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--light-grey);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+
+  .service-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--navy);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .service-title {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--navy-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .service-desc {
+    font-size: 0.83rem;
+    color: var(--grey);
+    line-height: 1.6;
+  }
+
+  .initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .initiative-item {
+    background: var(--navy-deep);
+    border-radius: 10px;
+    padding: 1.25rem;
+    color: var(--white);
+    border-left: 3px solid var(--gold);
+  }
+
+  .initiative-item h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--gold-light); }
+  .initiative-item p { font-size: 0.8rem; color: #94a3b8; line-height: 1.5; }
+
+  /* ── OVERSEAS ── */
+  #overseas {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, #1e3a8a 100%);
+    color: var(--white);
+  }
+
+  #overseas .section-title { color: var(--white); }
+  #overseas .section-eyebrow { color: var(--gold-light); }
+
+  .overseas-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 2rem;
+  }
+
+  .country-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .country-flag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: #e2e8f0;
+  }
+
+  .overseas-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .overseas-service {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .overseas-service .icon { font-size: 1.2rem; margin-top: 1px; }
+  .overseas-service p { font-size: 0.82rem; font-weight: 600; color: #e2e8f0; }
+
+  /* ── POSTERS ── */
+  #posters { background: var(--off-white); }
+
+  .poster-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .poster-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--light-grey);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.25s;
+  }
+
+  .poster-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+
+  .poster-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background: #f0f2f8;
+    display: block;
+    padding: 0.5rem;
+  }
+
+  .poster-info {
+    padding: 0.9rem 1rem;
+  }
+
+  .poster-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+  }
+
+  .poster-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--navy-deep);
+  }
+
+  /* Upload Panel */
+  .upload-panel {
+    margin-top: 2.5rem;
+    background: var(--white);
+    border: 2px dashed var(--light-grey);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: border-color 0.2s;
+    cursor: pointer;
+  }
+
+  .upload-panel.drag-over {
+    border-color: var(--gold);
+    background: rgba(201,162,39,0.04);
+  }
+
+  .upload-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+  .upload-panel h3 { font-size: 1rem; font-weight: 700; color: var(--navy-deep); margin-bottom: 0.4rem; }
+  .upload-panel p { font-size: 0.83rem; color: var(--grey); margin-bottom: 1rem; }
+
+  #poster-file-input { display: none; }
+
+  .btn-upload {
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .btn-upload:hover { background: var(--navy-deep); }
+
+  /* ── WHY US ── */
+  #why { background: var(--white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .why-card {
+    text-align: center;
+    padding: 1.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--light-grey);
+    transition: box-shadow 0.25s;
+  }
+
+  .why-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
+  .why-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .why-card h4 { font-size: 0.88rem; font-weight: 700; color: var(--navy-deep); margin-bottom: 0.4rem; }
+  .why-card p { font-size: 0.8rem; color: var(--grey); line-height: 1.5; }
+
+  /* ── CONTACT / ENQUIRY ── */
+  #contact { background: var(--off-white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+    margin-top: 2.5rem;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--navy-deep);
+    margin-bottom: 1rem;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+    color: #374151;
+  }
+
+  .contact-item .ci-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--navy);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-item a { color: var(--navy); font-weight: 600; text-decoration: none; }
+  .contact-item a:hover { color: var(--gold); }
+
+  .enquiry-form {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--light-grey);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  }
+
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--navy-deep);
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; margin-bottom: 1rem; }
+  .form-group label { font-size: 0.78rem; font-weight: 600; color: var(--navy-deep); margin-bottom: 0.4rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea {
+    padding: 0.65rem 0.9rem;
+    border: 1px solid #dde1ea;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a2e;
+    outline: none;
+    transition: border-color 0.2s;
+    background: var(--white);
+  }
+
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,162,39,0.12);
+  }
+
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--navy-deep);
+    color: var(--white);
+    font-weight: 700;
+    padding: 0.85rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover {
+    background: var(--gold);
+    color: var(--navy-deep);
+    transform: translateY(-1px);
+  }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-deep);
+    border-top: 2px solid var(--gold);
+    padding: 2.5rem 2rem 1.5rem;
+    color: #94a3b8;
+    text-align: center;
+  }
+
+  .footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-logos img { max-height: 50px; opacity: 0.85; filter: brightness(1.2); }
+
+  .footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--gold-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold-light); }
+
+  .footer-copy { font-size: 0.78rem; color: #475569; }
+
+  /* ── SECTION DIVIDER ── */
+  .gold-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    margin: 0.75rem 0 1.25rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .about-grid, .overseas-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .services-grid, .initiatives-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .overseas-services { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy-deep); border-top: 1px solid var(--gold); padding: 1rem 0; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 0.6rem 1.5rem; }
+    .hamburger { display: flex; }
+    .services-grid, .initiatives-grid, .why-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-divider { display: none; }
+    .stat-cards { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* Smooth section reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-brand">
+    <div class="nav-brand-text"><span>The Career</span><br>Catalysts Global</div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#tccg">TCCG</a></li>
+    <li><a href="#overseas">Overseas</a></li>
+    <li><a href="#posters">Gallery</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-badge">✦ Campus Training · Career Enablement · Global Education ✦</div>
+
+  <div class="hero-logos">
+    <div class="hero-logo-box">
+      <img src="Logo.jpg" alt="The Career Catalysts Global" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;color:#f5d800;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700">THE CAREER<br>CATALYSTS GLOBAL</div>
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-logo-box">
+      <img src="Aditya_Overseas_Education_Final.png" alt="Aditya Overseas Education" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div style="display:none;color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700">ADITYA<br>OVERSEAS EDUCATION</div>
+    </div>
+  </div>
+
+  <h1 class="hero-title">
+    Empowering Talent.<br>
+    <span class="highlight">Elevating Careers.</span><br>
+    Shaping Global Futures.
+  </h1>
+
+  <p class="hero-sub">
+    Two powerful wings of one mission — transforming students into career-ready professionals and guiding them toward world-class international education.
+  </p>
+
+  <div class="hero-pills">
+    <span class="hero-pill">🎓 Campus Training</span>
+    <span class="hero-pill">💼 Placements & Recruitment</span>
+    <span class="hero-pill">🌍 Overseas Education</span>
+    <span class="hero-pill">🤝 HR Conclaves</span>
+    <span class="hero-pill">✈️ UK · Australia · NZ · Germany</span>
+  </div>
+
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+    <a href="#tccg" class="btn-outline">Explore Services</a>
+  </div>
+
+  <div class="scroll-down">
+    <div class="scroll-arrow"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid reveal">
+      <div>
+        <div class="section-eyebrow">About Us</div>
+        <h2 class="section-title">Building Bridges Between<br>Academia & Industry</h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">
+          The Career Catalysts Global (TCCG) is a professionally driven campus training and career development organization with an extensive network spanning Manufacturing, IT, Pharmaceuticals, Healthcare, Banking, and Corporate Services.
+        </p>
+        <div class="about-feature-list">
+          <div class="about-feature"><div class="check-icon">✓</div><span>Industry-Focused Training Programs</span></div>
+          <div class="about-feature"><div class="check-icon">✓</div><span>Recruitment &amp; Placement Solutions</span></div>
+          <div class="about-feature"><div class="check-icon">✓</div><span>Career Development &amp; Mentorship</span></div>
+          <div class="about-feature"><div class="check-icon">✓</div><span>Corporate Engagement &amp; Networking Platforms</span></div>
+          <div class="about-feature"><div class="check-icon">✓</div><span>Employability Enhancement Initiatives</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="stat-cards" style="margin-bottom:1.25rem">
+          <div class="stat-card"><div class="stat-num">25<span>+</span></div><div class="stat-label">Years of HR &amp; Training Expertise</div></div>
+          <div class="stat-card"><div class="stat-num">6K<span>+</span></div><div class="stat-label">Hours of Professional Training Delivered</div></div>
+          <div class="stat-card"><div class="stat-num">600<span>+</span></div><div class="stat-label">Institutions Across India</div></div>
+          <div class="stat-card"><div class="stat-num">4<span>+</span></div><div class="stat-label">Countries for International Education</div></div>
+        </div>
+        <div class="mentor-card">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Lead Mentor</div>
+          <div class="mentor-name">A. Ramesh Aditya</div>
+          <div class="mentor-title">Strategic Career Mentor · Corporate Trainer · Placement Excellence Specialist</div>
+          <p class="mentor-bio">A highly respected professional with over 25+ years of expertise in Human Resources, Corporate Training, Talent Development, and Campus Placements. Trusted advisor to reputed corporates and educational institutions across India.</p>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+            <span style="background:rgba(201,162,39,0.2);border:1px solid var(--gold);color:var(--gold-light);padding:0.25rem 0.65rem;border-radius:20px;font-size:0.73rem">HR Strategist</span>
+            <span style="background:rgba(201,162,39,0.2);border:1px solid var(--gold);color:var(--gold-light);padding:0.25rem 0.65rem;border-radius:20px;font-size:0.73rem">Career Mentor</span>
+            <span style="background:rgba(201,162,39,0.2);border:1px solid var(--gold);color:var(--gold-light);padding:0.25rem 0.65rem;border-radius:20px;font-size:0.73rem">Campus Placement Expert</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TCCG -->
+<section id="tccg">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">The Career Catalysts Global</div>
+      <h2 class="section-title">Campus Training &amp; Employability Programs</h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc">Designed to equip students with industry-relevant competencies and professional confidence needed to succeed in today's competitive landscape.</p>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <div class="service-title">Employability &amp; Industry Readiness</div>
+        <div class="service-desc">Bridging the gap between what colleges teach and what industries demand, with practical skill-building modules.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💬</div>
+        <div class="service-title">Communication &amp; Soft Skills</div>
+        <div class="service-desc">Advanced communication, professional etiquette, and personality development for workplace excellence.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎤</div>
+        <div class="service-title">Interview Preparation</div>
+        <div class="service-desc">Mock interview sessions, HR interview coaching, and GD preparation to crack any selection process.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🗺️</div>
+        <div class="service-title">Career Planning &amp; Mentoring</div>
+        <div class="service-desc">Goal-oriented career path mapping, one-on-one mentoring, and long-term professional guidance.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📄</div>
+        <div class="service-title">Resume Building &amp; Personal Branding</div>
+        <div class="service-desc">Crafting impactful resumes, LinkedIn profiles, and a compelling personal brand that stands out.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏆</div>
+        <div class="service-title">Leadership &amp; Workplace Readiness</div>
+        <div class="service-desc">Team leadership, workplace dynamics, and professional grooming for corporate environments.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:3.5rem" class="reveal">
+      <div class="section-eyebrow">Career Engagement</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy-deep);margin-bottom:1rem">Industry Connect Initiatives</h3>
+      <div class="initiatives-grid">
+        <div class="initiative-item"><h4>🏫 Campus Recruitment Drives</h4><p>Connecting institutions with leading recruiters and top hiring organizations across industries.</p></div>
+        <div class="initiative-item"><h4>💼 Internship Programs</h4><p>Practical exposure and real-world industry experience for hands-on learning.</p></div>
+        <div class="initiative-item"><h4>🎪 Mega Job Fairs</h4><p>Large-scale recruitment platforms for aspiring graduates and entry-level professionals.</p></div>
+        <div class="initiative-item"><h4>✅ Final Placement Support</h4><p>Comprehensive assistance ensuring successful career placement outcomes for all students.</p></div>
+        <div class="initiative-item"><h4>🤝 HR Conclaves</h4><p>Exclusive corporate interaction forums featuring top HR leaders and industry experts.</p></div>
+        <div class="initiative-item"><h4>🏛️ Civil Services Conclaves</h4><p>Structured mentoring and awareness programs for competitive exam aspirants.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERSEAS -->
+<section id="overseas">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Aditya Overseas Education</div>
+      <h2 class="section-title">Your Gateway to World-Class<br>International Education</h2>
+      <div class="gold-divider"></div>
+      <p style="color:#94a3b8;line-height:1.8;font-size:0.95rem;max-width:620px">
+        Empowering Dreams. Enabling Global Success. We are committed to helping students pursue quality international education through expert guidance and personalized support — from application to visa to arrival.
+      </p>
+    </div>
+    <div class="overseas-grid reveal">
+      <div>
+        <h3 style="font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem">Study Destinations We Support</h3>
+        <div class="country-flags">
+          <div class="country-flag">🇬🇧 United Kingdom</div>
+          <div class="country-flag">🇦🇺 Australia</div>
+          <div class="country-flag">🇳🇿 New Zealand</div>
+          <div class="country-flag">🇩🇪 Germany</div>
+          <div class="country-flag">🌐 And Many More</div>
+        </div>
+
+        <div style="margin-top:2rem">
+          <h3 style="font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.75rem">What We Offer</h3>
+          <div class="overseas-services">
+            <div class="overseas-service"><div class="icon">🎓</div><p>University Admissions Guidance</p></div>
+            <div class="overseas-service"><div class="icon">📋</div><p>Course &amp; Program Selection</p></div>
+            <div class="overseas-service"><div class="icon">📑</div><p>Application Management</p></div>
+            <div class="overseas-service"><div class="icon">✈️</div><p>Visa Guidance &amp; Support</p></div>
+            <div class="overseas-service"><div class="icon">🏫</div><p>Pre-Departure Orientation</p></div>
+            <div class="overseas-service"><div class="icon">💰</div><p>Scholarship Assistance</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:2rem">
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1rem">Why Choose Aditya Overseas</div>
+          <div style="display:flex;flex-direction:column;gap:0.9rem">
+            <div style="display:flex;align-items:flex-start;gap:0.75rem">
+              <div style="width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.7rem;font-weight:900;color:var(--navy-deep)">✓</div>
+              <div><div style="font-weight:600;font-size:0.88rem;color:#e2e8f0;margin-bottom:0.2rem">Expert Guidance</div><div style="font-size:0.8rem;color:#94a3b8">Personalised counselling from an experienced overseas education specialist</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.75rem">
+              <div style="width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.7rem;font-weight:900;color:var(--navy-deep)">✓</div>
+              <div><div style="font-weight:600;font-size:0.88rem;color:#e2e8f0;margin-bottom:0.2rem">Admission Support</div><div style="font-size:0.8rem;color:#94a3b8">End-to-end application management for globally recognised universities</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.75rem">
+              <div style="width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.7rem;font-weight:900;color:var(--navy-deep)">✓</div>
+              <div><div style="font-weight:600;font-size:0.88rem;color:#e2e8f0;margin-bottom:0.2rem">Global Opportunities</div><div style="font-size:0.8rem;color:#94a3b8">Access to top-ranked universities across the UK, Australia, NZ, Germany &amp; more</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.75rem">
+              <div style="width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.7rem;font-weight:900;color:var(--navy-deep)">✓</div>
+              <div><div style="font-weight:600;font-size:0.88rem;color:#e2e8f0;margin-bottom:0.2rem">Success Assured</div><div style="font-size:0.8rem;color:#94a3b8">Dedicated support at every step of your international education journey</div></div>
+            </div>
+          </div>
+          <div style="margin-top:1.5rem;padding:1rem;background:rgba(201,162,39,0.15);border:1px solid var(--gold);border-radius:10px;text-align:center">
+            <div style="color:var(--gold-light);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;margin-bottom:0.3rem">UNIT OF</div>
+            <div style="color:var(--white);font-family:'Playfair Display',serif;font-weight:700;font-size:1rem">The Career Catalysts Global</div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary" style="display:block;text-align:center;margin-top:1.25rem">Get Free Counselling →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTERS GALLERY -->
+<section id="posters">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Gallery</div>
+      <h2 class="section-title">Our Posters &amp; Promotions</h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc">A collection of our latest campaigns, event promotions, and awareness materials. Upload new posters below.</p>
+    </div>
+
+    <div class="poster-gallery reveal" id="posterGallery">
+      <!-- Pre-loaded posters from uploaded images -->
+      <div class="poster-card">
+        <img src="ChatGPT_Image_May_7__2026__08_54_02_PM.png" alt="TCCG Poster" loading="lazy">
+        <div class="poster-info"><div class="poster-tag">TCCG</div><div class="poster-name">Congratulations to +2 Students</div></div>
+      </div>
+      <div class="poster-card">
+        <img src="Adtiya_14__2_.jpg" alt="Career Catalysts Poster" loading="lazy">
+        <div class="poster-info"><div class="poster-tag">TCCG</div><div class="poster-name">Campus Training &amp; Career Enablement</div></div>
+      </div>
+      <div class="poster-card">
+        <img src="Aditya_29_4_26_Final__2_.jpg" alt="Recruitment & Training" loading="lazy">
+        <div class="poster-info"><div class="poster-tag">TCCG</div><div class="poster-name">Recruitment &amp; Training Excellence</div></div>
+      </div>
+      <div class="poster-card">
+        <img src="ChatGPT_Image_May_7__2026__10_44_36_PM.png" alt="TCCG Flyer" loading="lazy">
+        <div class="poster-info"><div class="poster-tag">TCCG</div><div class="poster-name">Career Catalysts Initiatives</div></div>
+      </div>
+    </div>
+
+    <!-- Upload Panel -->
+    <div class="upload-panel reveal" id="uploadPanel" onclick="document.getElementById('poster-file-input').click()">
+      <div class="upload-icon">📤</div>
+      <h3>Upload New Posters</h3>
+      <p>Drag &amp; drop image files here, or click to browse<br><small style="color:#9ca3af">Supports JPG, PNG, WEBP · Multiple files allowed</small></p>
+      <button class="btn-upload" onclick="event.stopPropagation();document.getElementById('poster-file-input').click()">Choose Files</button>
+      <input type="file" id="poster-file-input" accept="image/*" multiple onchange="addPosters(this)">
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="section-eyebrow">The TCCG Advantage</div>
+      <h2 class="section-title" style="text-align:center">Why Choose Us?</h2>
+      <div class="gold-divider" style="margin:0.75rem auto 0"></div>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h4>Industry-Aligned Training</h4>
+        <p>Methodologies designed around real industry needs and hiring benchmarks.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌐</div>
+        <h4>Strong Corporate Network</h4>
+        <p>Deep connections with recruiters and HR leaders across sectors nationwide.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📈</div>
+        <h4>Proven Track Record</h4>
+        <p>Consistent, measurable outcomes in student transformation and placement success.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💡</div>
+        <h4>Outcome-Driven Learning</h4>
+        <p>Interactive, practical sessions focused on real results — not just theory.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🧭</div>
+        <h4>Personalized Mentoring</h4>
+        <p>Tailored career guidance that respects each student's unique strengths and goals.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏅</div>
+        <h4>Commitment to Excellence</h4>
+        <p>Relentless focus on placement excellence and career success for every student.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">✈️</div>
+        <h4>Global Education Access</h4>
+        <p>Connecting students to world-class universities through Aditya Overseas Education.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h4>End-to-End Support</h4>
+        <p>From first consultation to final placement or university admission — we're with you.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;padding:2.5rem;background:var(--navy-deep);border-radius:16px;border:1px solid rgba(201,162,39,0.3)" class="reveal">
+      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--white);margin-bottom:0.75rem">Transform Your Campus into a Career Success Hub</div>
+      <p style="color:#94a3b8;font-size:0.9rem;margin-bottom:1.5rem">Partner with The Career Catalysts Global for Training Excellence, Placement Enablement, Industry Collaboration &amp; Career Empowerment.</p>
+      <a href="#contact" class="btn-primary">Partner With Us Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title">Enquire Now</h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc">Whether it's campus training, career guidance, or international education — we're here to help. Fill in the form and we'll get back to you promptly.</p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--grey);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.2rem">Phone / WhatsApp</div>
+            <a href="tel:+919952350345">+91 99523 50345</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div>
+            <div style="font-size:0.75rem;font-weight:700;color:var(--grey);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.2rem">Email</div>
+            <a href="mailto:tccg2026@gmail.com">tccg2026@gmail.com</a>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;background:var(--navy-deep);border-radius:12px;padding:1.5rem;color:var(--white)">
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Our Vision</div>
+          <p style="font-size:0.88rem;color:#94a3b8;line-height:1.7;font-style:italic">"To become a trusted catalyst in creating globally competent, career-ready talent through innovation, mentorship, and industry collaboration."</p>
+          <div style="margin-top:1rem;font-size:0.8rem;font-weight:600;color:var(--gold-light)">— A. Ramesh Aditya, Founder</div>
+        </div>
+
+        <div style="margin-top:1.5rem">
+          <a href="https://wa.me/919952350345" target="_blank" style="display:flex;align-items:center;gap:0.6rem;background:#25d366;color:white;padding:0.75rem 1rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.88rem;transition:opacity 0.2s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+            <span style="font-size:1.2rem">💬</span> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="enquiry-form">
+        <div class="form-title">Send Us an Enquiry</div>
+        <div id="enquiryFormWrap">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="f-name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input type="tel" id="f-phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="f-email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label>I'm Interested In *</label>
+            <select id="f-service" required>
+              <option value="">-- Select a Service --</option>
+              <optgroup label="Career Catalysts Global (TCCG)">
+                <option>Campus Training Programs</option>
+                <option>Placement &amp; Recruitment Support</option>
+                <option>Career Mentoring &amp; Guidance</option>
+                <option>HR Conclave / Job Fair</option>
+                <option>Corporate Training</option>
+              </optgroup>
+              <optgroup label="Aditya Overseas Education">
+                <option>Study in UK</option>
+                <option>Study in Australia</option>
+                <option>Study in New Zealand</option>
+                <option>Study in Germany</option>
+                <option>Other Country – Overseas Education</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Qualification</label>
+              <select id="f-qual">
+                <option value="">-- Select --</option>
+                <option>10th / High School</option>
+                <option>+2 / Intermediate</option>
+                <option>UG Student</option>
+                <option>UG Graduate</option>
+                <option>PG Student</option>
+                <option>PG Graduate</option>
+                <option>Working Professional</option>
+                <option>Institution / College</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>City / Location</label>
+              <input type="text" id="f-city" placeholder="Your city">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="f-msg" placeholder="Tell us more about what you're looking for..."></textarea>
+          </div>
+          <button class="btn-submit" onclick="submitEnquiry()">Submit Enquiry →</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem">✅</div>
+          <div style="font-size:1.1rem;margin-bottom:0.5rem">Thank you for reaching out!</div>
+          <div style="font-size:0.85rem;color:#374151">We'll contact you within 24 hours. You can also WhatsApp us directly at <strong>+91 99523 50345</strong>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logos">
+    <img src="Logo.jpg" alt="TCCG Logo" onerror="this.style.display='none'">
+    <img src="Aditya_Overseas_Education_Final.png" alt="Aditya Overseas Education" onerror="this.style.display='none'">
+  </div>
+  <div class="footer-tagline">Empowering Talent · Elevating Careers · Shaping Future-Ready Professionals</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#tccg">TCCG Services</a>
+    <a href="#overseas">Overseas Education</a>
+    <a href="#posters">Gallery</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div style="margin-bottom:0.75rem">
+    <a href="tel:+919952350345" style="color:#94a3b8;text-decoration:none;font-size:0.85rem">📞 +91 99523 50345</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:tccg2026@gmail.com" style="color:#94a3b8;text-decoration:none;font-size:0.85rem">✉️ tccg2026@gmail.com</a>
+  </div>
+  <div class="footer-copy">© 2026 The Career Catalysts Global · Aditya Overseas Education. All rights reserved.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Poster upload
+  function addPosters(input) {
+    const gallery = document.getElementById('posterGallery');
+    Array.from(input.files).forEach(file => {
+      const reader = new FileReader();
+      reader.onload = e => {
+        const card = document.createElement('div');
+        card.className = 'poster-card';
+        const name = file.name.replace(/\.[^.]+$/, '').replace(/[_-]/g, ' ');
+        card.innerHTML = `
+          <img src="${e.target.result}" alt="${name}" style="width:100%;height:320px;object-fit:contain;background:#f0f2f8;display:block;padding:0.5rem">
+          <div class="poster-info"><div class="poster-tag">NEW</div><div class="poster-name">${name}</div></div>`;
+        gallery.insertBefore(card, gallery.firstChild);
+      };
+      reader.readAsDataURL(file);
+    });
+    input.value = '';
+  }
+
+  // Drag & drop
+  const panel = document.getElementById('uploadPanel');
+  panel.addEventListener('dragover', e => { e.preventDefault(); panel.classList.add('drag-over'); });
+  panel.addEventListener('dragleave', () => panel.classList.remove('drag-over'));
+  panel.addEventListener('drop', e => {
+    e.preventDefault();
+    panel.classList.remove('drag-over');
+    const dt = { files: e.dataTransfer.files };
+    addPosters(dt);
+  });
+
+  // Form submission
+  function submitEnquiry() {
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const service = document.getElementById('f-service').value;
+    if (!name || !phone || !service) {
+      alert('Please fill in Name, Phone, and Service selection.');
+      return;
+    }
+    document.getElementById('enquiryFormWrap').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+
+    // Build WhatsApp message
+    const msg = `Hello, I'm ${name}. I'm interested in: ${service}. Phone: ${phone}. ${document.getElementById('f-msg').value}`;
+    setTimeout(() => {
+      window.open('https://wa.me/919952350345?text=' + encodeURIComponent(msg), '_blank');
+    }, 1000);
+  }
+</script>
+</body>
+</html>
